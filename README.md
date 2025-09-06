@@ -39,3 +39,5 @@ O projeto consiste em um **site pessoal** com as seguintes seções:
 1. Clone este repositório:
    ```bash
    git clone https://github.com/JulioOEBoy/seu-portfolio.git
+
+ou acesse: https://juliooeboy.github.io/Portfolio-primeiro-teste/
