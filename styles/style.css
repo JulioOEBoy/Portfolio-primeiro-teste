@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap');
+
+/* ========================
+   CORES E FONTES
+======================== */
+:root {
+    --cor-principal: #2c3639;
+    --cor-secundaria: #f6f6f6;
+    --cor-terciaria: #a27b5c;
+    --cor-quaternaria: #004b14;
+    --cor-hover: #272727;
+
+    --fonte-principal: 'Montserrat', sans-serif;
+    --fonte-secundaria: 'Krona One', sans-serif;
+}
+
+/* ========================
+   RESET
+======================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a img, .icone-social {
+    border: none;
+    filter: none;
+}
+
+/* ========================
+   BASE
+======================== */
+body {
+    min-height: 100vh;
+    background-color: var(--cor-principal);
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-principal);
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========================
+   NAVEGAÇÃO
+======================== */
+.cabecalho-portfolio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 10%;
+}
+
+.navegacao-portfolio .lista-navegacao {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.navegacao-portfolio .link-navegacao {
+    color: var(--cor-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: var(--fonte-principal);
+    transition: color 0.3s ease;
+}
+
+.navegacao-portfolio .link-navegacao:hover {
+    color: var(--cor-terciaria);
+}
+
+/* ========================
+   CONTAINER PRINCIPAL
+======================== */
+.container-portfolio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2.5rem 10%;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    flex: 1; 
+}
+
+/* ========================
+   TEXTO
+======================== */
+.texto-portfolio,
+.descricao-portfolio,
+.sobre-mim-texto {
+    flex: 1;
+    min-width: 15.625rem;
+    font-family: var(--fonte-principal); 
+    font-size: 1rem; 
+    line-height: 1.6;
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.titulo-portfolio,
+.sobre-mim-titulo-destaque {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.75rem;
+    font-weight: normal;
+    margin-bottom: 1.25rem;
+}
+
+.titulo-destaque,
+.sobre-mim-titulo-destaque {
+    color: var(--cor-terciaria);
+}
+
+.habilidades {
+    color: var(--cor-terciaria);
+}
+
+/* ========================
+   LINKS SOCIAIS
+======================== */
+.links-sociais,
+.projects-links-sociais {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1.25rem;
+}
+
+.titulo-sociais,
+.projects-titulo-sociais {
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.botao-social,
+.projects-botao-social,
+.botao-download {
+    width: 23.125rem;
+    color: var(--cor-secundaria);
+    border-radius: 1rem;
+    padding: 0.9375rem 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    font-family: var(--fonte-principal);
+    text-align: center;
+    border: 0.125rem solid var(--cor-terciaria); 
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.botao-social:hover,
+.projects-botao-social:hover,
+.botao-download:hover {
+    background-color: var(--cor-terciaria); 
+    border-color: var(--cor-terciaria); 
+    color: var(--cor-principal); 
+    cursor: pointer;
+}
+
+.icone-social,
+.projects-icone-social {
+    margin-right: 0.625rem;
+    vertical-align: middle;
+    filter: invert(1);
+    pointer-events: none;
+}
+
+/* ========================
+   FOTO
+======================== */
+.foto-perfil,
+.foto-github {
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.625rem;
+}
+
+.foto-perfil {
+    background-image: url('../assets/Eu.jpg');
+    width: 28.125rem;
+    height: 34.375rem;
+}
+
+.foto-github {
+    background-image: url('../assets/meugithub.png');
+    width: 43.75rem;
+    height: 34.375rem;
+}
+
+/* ========================
+   FOOTER
+======================== */
+footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-hover); 
+    padding: 0.75rem 0;
+    box-shadow: 0 -0.125rem 0.5rem rgba(0,0,0,0.4);
+    z-index: 1000;
+    text-align: center;
+}
+
+.rodape-portfolio p {
+    margin: 0;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    font-family: var(--fonte-principal); 
+    color: var(--cor-secundaria); 
+    opacity: 0.9;
+    letter-spacing: 0.03125rem;
+    user-select: none;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.rodape-portfolio p:hover {
+    opacity: 1;
+    transform: scale(1.02);
+}
+
+/* ========================
+   SOBRE MIM (about.html)
+======================== */
+.sobre-mim-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1.25rem;
+    max-width: 75rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.sobre-mim-texto-portfolio {
+    width: 50%;
+    margin-bottom: 1.25rem;
+    font-family: var(--fonte-secundaria); 
+    font-size: 0.625rem;
+    line-height: 1.6;
+}
+
+/* ========================
+   CURRÍCULO (about.html)
+======================== */
+.curriculo-container {
+    max-width: 50rem;
+    margin: 3.75rem auto;
+    padding: 0 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.lista-curriculo {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.125rem;
+    font-family: var(--fonte-principal); 
+}
+
+.lista-curriculo li {
+    margin-bottom: 0.9375rem;
+    line-height: 1.5;
+}
+
+.link-certificado {
+    color: var(--cor-terciaria); 
+}
+
+.link-certificado:hover {
+    text-decoration: underline;
+}
+
+strong {
+    color: var(--cor-terciaria); 
+}
+/* ========================
+   contato (contact.html)
+======================== */
+.botao-contato{
+    width: 23.125rem;
+    color: var(--cor-secundaria);
+    border-radius: 1rem;
+    padding: 0.9375rem 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    font-family: var(--fonte-principal);
+    text-align: center;
+    border: 0.125rem solid var(--cor-terciaria);
+    background-color: none;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.botao-contato:hover {
+    background-color: var(--cor-terciaria);
+    border-color: var(--cor-terciaria);
+    color: var(--cor-principal);
+    cursor: pointer;
+}
+/* ========================
+   AJUSTES DE RESPONSIVIDADE
+======================== */
+@media (max-width: 768px) {
+    .cabecalho-portfolio {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navegacao-portfolio .lista-navegacao {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .container-portfolio {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 1.5rem 5%; 
+    }
+
+
+    .foto-perfil,
+    .foto-github {
+        order: -1; 
+        width: 100%; 
+        margin-bottom: 1.5rem;
+    }
+
+    .foto-perfil {
+        aspect-ratio: 28.125 / 34.375; 
+    }
+
+    .foto-github {
+        aspect-ratio: 43.75 / 34.375; 
+    }
+
+    .texto-portfolio,
+    .descricao-portfolio,
+    .sobre-mim-texto {
+        width: 100%;
+        padding: 0.625rem;
+    }
+
+    .botao-social,
+    .projects-botao-social,
+    .botao-download,
+    .botao-contato {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .sobre-mim-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sobre-mim-texto-portfolio {
+        width: 100%;
+        font-size: 0.875rem;
+    }
+}
