@@ -307,6 +307,24 @@ strong {
     color: var(--cor-principal);
     cursor: pointer;
 }
+
+/* ========================
+   LAYOUT PÁGINA PROJETOS
+======================== */
+.projects-layout {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-layout .texto-portfolio {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    flex-grow: 0;
+    min-width: auto;
+}
+
 /* ========================
    AJUSTES DE RESPONSIVIDADE
 ======================== */
@@ -335,12 +353,17 @@ strong {
         margin: 1.5rem 5%; 
     }
 
-
-    .foto-perfil,
-    .foto-github {
+    .foto-perfil {
         order: -1; 
         width: 100%; 
         margin-bottom: 1.5rem;
+    }
+
+    .foto-github {
+        width: 100%; 
+        margin-bottom: 1.0rem;
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
     .foto-perfil {
@@ -348,7 +371,7 @@ strong {
     }
 
     .foto-github {
-        aspect-ratio: 43.75 / 34.375; 
+        aspect-ratio: 43.75 / 34.375;
     }
 
     .texto-portfolio,
