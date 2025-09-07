@@ -167,7 +167,6 @@ body {
 .projects-icone-social {
     margin-right: 0.625rem;
     vertical-align: middle;
-    filter: invert(1);
     pointer-events: none;
 }
 
@@ -399,4 +398,5 @@ strong {
         width: 100%;
         font-size: 0.875rem;
     }
+
 }
